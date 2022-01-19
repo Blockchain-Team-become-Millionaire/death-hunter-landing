@@ -1,0 +1,51 @@
+.section-video {
+  background-image: url("../images/backgrounds/banner-video.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-about {
+  background-image: url("../images/backgrounds/about.jpg");
+  background-size: cover;
+}
+
+.section-value {
+  background-image: url("../images/backgrounds/value-proposition.jpg");
+  background-size: cover;
+  height: auto;
+}
+
+.section-hero {
+  background-image: url("../images/backgrounds/hero.jpg");
+  background-size: cover;
+}
+
+.section-game-feature {
+  background-image: url("../images/backgrounds/game-feature.jpg");
+  background-size: cover;
+}
+
+.section-pte {
+  background-image: url("../images/backgrounds/pte.jpg");
+  background-size: cover;
+}
+
+.section-roadmap {
+  background-image: url("../images/backgrounds/roadmap.jpg");
+  background-size: cover;
+  height: 975px;
+}
+
+.section-our-team {
+  background-image: url("../images/backgrounds/our-team.jpg");
+  background-size: cover;
+  height: 625px;
+}
+
+.section-partner {
+  background-size: cover;
+  height: 605px;
+}

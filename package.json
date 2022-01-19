@@ -1,0 +1,15 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx tailwindcss --postcss -i styles/main.css -o ./public/assets/css/main.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^3.0.15"
+  },
+  "dependencies": {
+    "postcss-nesting": "^10.1.2"
+  }
+}

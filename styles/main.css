@@ -1,0 +1,42 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+@import "./components/nav.css";
+@import "./components/general.css";
+@import "./components/layout.css";
+@import "./components/button.css";
+
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "ff-monteral-two";
+  src: url("../fonts/ff-monteral-02.otf") format("woff"), url("../fonts/ff-monteral-02.otf") format("opentype"),
+    url("../fonts/ff-monteral-02.otf") format("truetype");
+}
+
+@layer base {
+  h2 {
+    @apply text-[56px];
+    background: linear-gradient(90.49deg, #fcba3b 7.83%, #ff8a1e 98.28%);
+    line-height: 75px;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #000000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h4 {
+    @apply text-[30px];
+    background: linear-gradient(90.49deg, #fcba3b 7.83%, #ff8a1e 98.28%);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+html,
+body {
+  font-family: "ff-monteral-two", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+}
