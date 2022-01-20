@@ -1,7 +1,7 @@
 const hero = {
   adonis: {
     description:
-      "Duncan has the special ability of his gauntlet that can generate super-high voltage electric currents, creating fire that melts metal. Duncan also apparates to go underground. He can even live without air for hours. Duncan's skin is very hard against metal, but is easily damaged by water.",
+      "Adonis has the special ability of his gauntlet that can generate super-high voltage electric currents, creating fire that melts metal. Duncan also apparates to go underground. He can even live without air for hours. Duncan's skin is very hard against metal, but is easily damaged by water.",
     strength: 70,
     agility: 30,
     defense: 55,
@@ -17,7 +17,7 @@ const hero = {
   },
   joyce: {
     description:
-      "Duncan has the special ability of his gauntlet that can generate super-high voltage electric currents, creating fire that melts metal. Duncan also apparates to go underground. He can even live without air for hours. Duncan's skin is very hard against metal, but is easily damaged by water.",
+      "Joyce has the special ability of his gauntlet that can generate super-high voltage electric currents, creating fire that melts metal. Duncan also apparates to go underground. He can even live without air for hours. Duncan's skin is very hard against metal, but is easily damaged by water.",
     strength: 55,
     agility: 33,
     defense: 28,
@@ -25,7 +25,7 @@ const hero = {
   },
   selina: {
     description:
-      "Duncan has the special ability of his gauntlet that can generate super-high voltage electric currents, creating fire that melts metal. Duncan also apparates to go underground. He can even live without air for hours. Duncan's skin is very hard against metal, but is easily damaged by water.",
+      "Selina has the special ability of his gauntlet that can generate super-high voltage electric currents, creating fire that melts metal. Duncan also apparates to go underground. He can even live without air for hours. Duncan's skin is very hard against metal, but is easily damaged by water.",
     strength: 90,
     agility: 32,
     defense: 55,
@@ -33,7 +33,7 @@ const hero = {
   },
   sunhee: {
     description:
-      "Duncan has the special ability of his gauntlet that can generate super-high voltage electric currents, creating fire that melts metal. Duncan also apparates to go underground. He can even live without air for hours. Duncan's skin is very hard against metal, but is easily damaged by water.",
+      "Sunhee has the special ability of his gauntlet that can generate super-high voltage electric currents, creating fire that melts metal. Duncan also apparates to go underground. He can even live without air for hours. Duncan's skin is very hard against metal, but is easily damaged by water.",
     strength: 30,
     agility: 83,
     defense: 27,
@@ -41,7 +41,7 @@ const hero = {
   },
   thienbao: {
     description:
-      "Duncan has the special ability of his gauntlet that can generate super-high voltage electric currents, creating fire that melts metal. Duncan also apparates to go underground. He can even live without air for hours. Duncan's skin is very hard against metal, but is easily damaged by water.",
+      "Thien Bao has the special ability of his gauntlet that can generate super-high voltage electric currents, creating fire that melts metal. Duncan also apparates to go underground. He can even live without air for hours. Duncan's skin is very hard against metal, but is easily damaged by water.",
     strength: 5,
     agility: 20,
     defense: 10,

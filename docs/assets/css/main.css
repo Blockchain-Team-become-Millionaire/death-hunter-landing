@@ -698,13 +698,18 @@ nav .logo {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-  box-sizing: border-box;
-  box-shadow: 0px 5px 15px rgba(255, 186, 54, 0.8);
-  border-radius: 10px;
 }
 
 .hero-avatar img {
   width: 90%;
+}
+
+.hero-avatar.active img:nth-child(1) {
+  display: none;
+}
+
+.hero-avatar:not(.active) img:nth-child(2) {
+  display: none;
 }
 
 .game-feature-image {
@@ -1194,11 +1199,6 @@ button {
 .py-\[100px\] {
   padding-top: 100px;
   padding-bottom: 100px;
-}
-
-.py-\[230px\] {
-  padding-top: 230px;
-  padding-bottom: 230px;
 }
 
 .pt-\[130px\] {

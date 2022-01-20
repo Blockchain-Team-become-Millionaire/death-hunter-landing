@@ -135,13 +135,18 @@
 
 .hero-avatar:hover,
 .hero-avatar.active {
-  box-sizing: border-box;
-  box-shadow: 0px 5px 15px rgba(255, 186, 54, 0.8);
-  border-radius: 10px;
 }
 
 .hero-avatar img {
   @apply w-[90%];
+}
+
+.hero-avatar.active img:nth-child(1) {
+  @apply hidden;
+}
+
+.hero-avatar:not(.active) img:nth-child(2) {
+  @apply hidden;
 }
 
 .game-feature-image {
