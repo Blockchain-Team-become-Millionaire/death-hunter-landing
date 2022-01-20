@@ -10,7 +10,7 @@
   <body>
     <!-- Nav Desktop -->
 
-    <nav class="flex z-30 fixed justify-center items-center inset-x-0 top-0 bg-[#181728] bg-opacity-30 h-[130px]">
+    <nav class="flex z-30 fixed justify-center items-center inset-x-0 top-0 bg-[#181728] bg-opacity-30 h-[100px]">
       <div class="container flex items-center justify-between">
         <div class="flex items-center">
           <img src="assets/images/logo.png" class="logo" alt="logo" />
@@ -36,15 +36,17 @@
           </ul>
         </div>
         <div>
-          <img class="" src="assets/images/play-now.png" alt="Play now" />
+          <img class="play-now-animation w-[140px]" src="assets/images/play-now.png" alt="Play now" />
         </div>
       </div>
     </nav>
     <!-- End Nav Desktop -->
 
-    <section id="video" class="section-video pt-[130px]">
-      <img src="assets/images/logo@5x.png" alt="Logo" />
-      <img class="-mt-16 play-now-animation" src="assets/images/play-now.png" alt="Play now" />
+    <section id="video" class="section-video">
+      <video muted autoplay loop style="height: 100%; width: 100%">
+        <source src="assets/videos/background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </section>
 
     <section id="about" class="section-about">

@@ -424,7 +424,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 h2 {
-  font-size: 56px;
+  font-size: 32px;
+}
+
+@media (min-width: 1280px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1536px) {
+  h2 {
+    font-size: 56px;
+  }
+}
+
+h2 {
   line-height: 70px;
   color: #fcba3b;
 }
@@ -538,13 +553,33 @@ nav .logo {
 }
 
 .section-video {
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("../images/backgrounds/banner-video.jpg");
+  padding-top: 56.25%;
+  display: block;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  background-position: 50% 50%;
   background-size: cover;
+}
+
+.section-video video {
+  right: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  position: absolute;
+  -o-object-position: 50% 50%;
+  object-position: 50% 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-width: 100%;
+  transform: translateZ(0);
+  margin: 0 auto;
+  opacity: 1;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .section-about {
@@ -659,7 +694,7 @@ nav .logo {
   top: -50px;
   left: 50%;
   transform: translateX(-50%);
-  height: 110%;
+  height: 109%;
 }
 
 .roadmap ul:nth-child(odd) {
@@ -908,24 +943,16 @@ button {
   left: 50%;
 }
 
+.-top-36 {
+  top: -9rem;
+}
+
 .-top-28 {
   top: -7rem;
 }
 
-.-top-16 {
-  top: -4rem;
-}
-
-.-top-32 {
-  top: -8rem;
-}
-
 .-top-20 {
   top: -5rem;
-}
-
-.-top-36 {
-  top: -9rem;
 }
 
 .z-30 {
@@ -943,10 +970,6 @@ button {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.-mt-16 {
-  margin-top: -4rem;
 }
 
 .mt-10 {
@@ -985,8 +1008,8 @@ button {
   aspect-ratio: 460 / 318;
 }
 
-.h-\[130px\] {
-  height: 130px;
+.h-\[100px\] {
+  height: 100px;
 }
 
 .h-\[4\.33px\] {
@@ -995,6 +1018,10 @@ button {
 
 .h-full {
   height: 100%;
+}
+
+.w-\[140px\] {
+  width: 140px;
 }
 
 .w-full {
@@ -1019,10 +1046,6 @@ button {
 
 .w-\[40\%\] {
   width: 40%;
-}
-
-.w-\[140px\] {
-  width: 140px;
 }
 
 .w-\[120px\] {
@@ -1276,10 +1299,6 @@ button {
   padding-bottom: 100px;
 }
 
-.pt-\[130px\] {
-  padding-top: 130px;
-}
-
 .pt-\[60px\] {
   padding-top: 60px;
 }
@@ -1438,16 +1457,12 @@ body {
 }
 
 @media (min-width: 1280px) {
-  .xl\:gap-32 {
-    gap: 8rem;
+  .xl\:gap-28 {
+    gap: 7rem;
   }
 
   .xl\:gap-20 {
     gap: 5rem;
-  }
-
-  .xl\:gap-28 {
-    gap: 7rem;
   }
 }
 
@@ -1456,12 +1471,12 @@ body {
     top: -6rem;
   }
 
-  .\32xl\:-top-16 {
-    top: -4rem;
-  }
-
   .\32xl\:-top-20 {
     top: -5rem;
+  }
+
+  .\32xl\:-top-16 {
+    top: -4rem;
   }
 
   .\32xl\:gap-40 {

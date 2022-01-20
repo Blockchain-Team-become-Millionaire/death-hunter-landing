@@ -56,7 +56,7 @@
 
 @layer base {
   h2 {
-    font-size: 56px;
+    @apply text-[32px] xl:text-[40px] 2xl:text-[56px];
     line-height: 70px;
     color: #fcba3b;
   }
