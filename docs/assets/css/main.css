@@ -594,26 +594,27 @@ nav .logo {
   /* position: relative; */
 }
 
-.title-about {
+.title-gold {
   position: relative;
   font-family: FF Monteral Two;
   text-align: center;
   letter-spacing: -0.25px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: linear-gradient(90.49deg, #fcba3b 7.83%, #ff8a1e 98.28%);
-  line-height: 75px;
   /* -webkit-text-stroke-width: 4px;
   -webkit-text-stroke-color: #000000; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.title-about:after {
+.title-gold:after {
   content: url("../images/icons/gold.png");
   position: absolute;
+  left: 50%;
   top: 75%;
-  left: 0;
-  right: 0;
+  width: 50%;
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .title-line {
@@ -675,16 +676,24 @@ button {
   top: 0px;
 }
 
+.top-1\/2 {
+  top: 50%;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
 
-.left-\[-13\%\] {
-  left: -13%;
+.bottom-\[6\%\] {
+  bottom: 6%;
 }
 
-.right-\[-13\%\] {
-  right: -13%;
+.left-\[-8\%\] {
+  left: -8%;
+}
+
+.right-\[-6\%\] {
+  right: -6%;
 }
 
 .left-1\/2 {
@@ -699,38 +708,6 @@ button {
   top: -6rem;
 }
 
-.-right-96 {
-  right: -24rem;
-}
-
-.top-1\/2 {
-  top: 50%;
-}
-
-.left-\[-10\%\] {
-  left: -10%;
-}
-
-.left-\[-8\%\] {
-  left: -8%;
-}
-
-.right-\[-8\%\] {
-  right: -8%;
-}
-
-.right-\[-9\%\] {
-  right: -9%;
-}
-
-.right-\[-6\%\] {
-  right: -6%;
-}
-
-.left-\[1\/2\] {
-  left: 1 / 2;
-}
-
 .z-30 {
   z-index: 30;
 }
@@ -741,14 +718,6 @@ button {
 
 .-z-10 {
   z-index: -10;
-}
-
-.col-span-5 {
-  grid-column: span 5 / span 5;
-}
-
-.col-span-7 {
-  grid-column: span 7 / span 7;
 }
 
 .mx-auto {
@@ -780,12 +749,8 @@ button {
   margin-bottom: 2.5rem;
 }
 
-.ml-\[8\%\] {
-  margin-left: 8%;
-}
-
-.ml-\[12\%\] {
-  margin-left: 12%;
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .flex {
@@ -820,16 +785,16 @@ button {
   width: 100%;
 }
 
+.w-\[78\%\] {
+  width: 78%;
+}
+
 .w-\[400px\] {
   width: 400px;
 }
 
 .w-\[480px\] {
   width: 480px;
-}
-
-.w-\[78\%\] {
-  width: 78%;
 }
 
 .w-\[30\%\] {
@@ -848,45 +813,24 @@ button {
   width: 140px;
 }
 
-.w-\[120px\] {
-  width: 120px;
-}
-
 .w-\[40\%\] {
   width: 40%;
 }
 
-.w-\[60\%\] {
-  width: 60%;
-}
-
-.w-\[50\%\] {
-  width: 50%;
+.w-\[120px\] {
+  width: 120px;
 }
 
 .w-\[54\%\] {
   width: 54%;
 }
 
-.w-\[80\%\] {
-  width: 80%;
-}
-
 .w-\[90\%\] {
   width: 90%;
 }
 
-.w-\[86\%\] {
-  width: 86%;
-}
-
 .max-w-screen-lg {
   max-width: 1024px;
-}
-
-.-translate-x-1\/2 {
-  --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .-translate-y-1\/2 {
@@ -894,9 +838,8 @@ button {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.scale-\[1\.2\] {
-  --tw-scale-x: 1.2;
-  --tw-scale-y: 1.2;
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -932,10 +875,6 @@ button {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.grid-cols-12 {
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -968,28 +907,12 @@ button {
   gap: 3rem;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
 .gap-6 {
   gap: 1.5rem;
-}
-
-.gap-x-10 {
-  -moz-column-gap: 2.5rem;
-       column-gap: 2.5rem;
-}
-
-.gap-x-20 {
-  -moz-column-gap: 5rem;
-       column-gap: 5rem;
-}
-
-.gap-x-40 {
-  -moz-column-gap: 10rem;
-       column-gap: 10rem;
-}
-
-.gap-x-32 {
-  -moz-column-gap: 8rem;
-       column-gap: 8rem;
 }
 
 .space-y-5 > :not([hidden]) ~ :not([hidden]) {
@@ -1120,6 +1043,11 @@ button {
   padding-bottom: 23px;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .py-\[122px\] {
   padding-top: 122px;
   padding-bottom: 122px;
@@ -1136,10 +1064,6 @@ button {
 
 .pt-\[60px\] {
   padding-top: 60px;
-}
-
-.pt-10 {
-  padding-top: 2.5rem;
 }
 
 .pt-\[110px\] {
@@ -1267,4 +1191,15 @@ body {
   color: #ffffff;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+.after\:w-full::after {
+  content: var(--tw-content);
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
