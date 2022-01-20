@@ -117,3 +117,36 @@
   margin-right: 0.5em;
   border-image: linear-gradient(180deg, #fdd984 0%, #a38252 100%) 2;
 }
+
+.hero-info {
+  border: 1.5px solid;
+  border-image-source: linear-gradient(252.82deg, rgba(252, 186, 59, 0.7) 1.8%, rgba(252, 186, 59, 0.6) 100%) 2;
+}
+
+.hero-avatar {
+  float: center;
+  @apply transition-all scale-90 brightness-[0.5] -my-6;
+}
+.hero-avatar:hover,
+.hero-avatar.active {
+  cursor: pointer;
+  @apply transition-all scale-110 brightness-100;
+}
+
+.hero-avatar:hover,
+.hero-avatar.active {
+  box-sizing: border-box;
+  box-shadow: 0px 5px 15px rgba(255, 186, 54, 0.8);
+  border-radius: 10px;
+}
+
+.hero-avatar img {
+  @apply w-[90%];
+}
+
+.game-feature-image {
+  border: 8px solid #fcba3b;
+  border-image: linear-gradient(180deg, #fcba3b 0%, #d3ab54 100%), 2;
+  filter: drop-shadow(0px 5px 30px rgba(252, 186, 59, 0.65));
+  border-radius: 10px;
+}

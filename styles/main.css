@@ -16,42 +16,42 @@
 
 @font-face {
   font-family: "FF Monteral Two";
-  src: url(../fonts/media/ff-monteral-02.eot);
+  src: url(../fonts/ff-monteral-02.eot);
 }
 
 @font-face {
   font-family: "FF Monteral Two";
-  src: url(../fonts/media/ff-monteral-02.woff) format("woff");
+  src: url(../fonts/ff-monteral-02.woff) format("woff");
 }
 
 @font-face {
   font-family: "FF Monteral Two";
-  src: url(../fonts/media/ff-monteral-02.otf) format("truetype");
+  src: url(../fonts/ff-monteral-02.otf) format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url(../fonts/media/Roboto-Regular.ttf) format("truetype");
+  src: url(../fonts/Roboto-Regular.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url(../fonts/media/Roboto-Regular.eot);
+  src: url(../fonts/Roboto-Regular.eot);
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url(../fonts/media/Roboto-Regular.woff) format("woff");
+  src: url(../fonts/Roboto-Regular.woff) format("woff");
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url(../fonts/media/Roboto-Regular.otf) format("truetype");
+  src: url(../fonts/Roboto-Regular.otf) format("truetype");
 }
 
 @font-face {
   font-family: "SF Pro";
-  src: url(../fonts/media/SF-Pro.ttf) format("truetype");
+  src: url(../fonts/SF-Pro.ttf) format("truetype");
 }
 
 @layer base {

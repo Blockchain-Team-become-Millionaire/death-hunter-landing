@@ -668,7 +668,55 @@ nav .logo {
      border-image: linear-gradient(180deg, #fdd984 0%, #a38252 100%) 2;
 }
 
-.title-gold {
+.hero-info {
+  border: 1.5px solid;
+  border-image-source: linear-gradient(252.82deg, rgba(252, 186, 59, 0.7) 1.8%, rgba(252, 186, 59, 0.6) 100%) 2;
+}
+
+.hero-avatar {
+  float: center;
+  margin-top: -1.5rem;
+  margin-bottom: -1.5rem;
+  --tw-scale-x: .9;
+  --tw-scale-y: .9;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-brightness: brightness(0.5);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.hero-avatar:hover,
+.hero-avatar.active {
+  cursor: pointer;
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-brightness: brightness(1);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 15px rgba(255, 186, 54, 0.8);
+  border-radius: 10px;
+}
+
+.hero-avatar img {
+  width: 90%;
+}
+
+.game-feature-image {
+  border: 8px solid #fcba3b;
+  -o-border-image: linear-gradient(180deg, #fcba3b 0%, #d3ab54 100%), 2;
+     border-image: linear-gradient(180deg, #fcba3b 0%, #d3ab54 100%), 2;
+  filter: drop-shadow(0px 5px 30px rgba(252, 186, 59, 0.65));
+  border-radius: 10px;
+}
+
+.title-gold,
+.title-gold-full {
   position: relative;
   font-family: FF Monteral Two;
   text-align: center;
@@ -691,16 +739,34 @@ nav .logo {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.title-line {
+.title-gold-full:after {
+  content: url("../images/icons/gold.png");
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 75%;
+}
+
+.title-line,
+.title-line-full {
   position: relative;
 }
 
 .title-line:after {
   content: url("../images/icons/line.png");
   position: absolute;
-  top: 36%;
-  left: 0;
-  right: 0;
+  left: 0px;
+  right: 0px;
+  top: 33.333333%;
+}
+
+.title-line-full:after {
+  content: url("../images/icons/line.png");
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 33.333333%;
+  width: 100%;
 }
 
 .container {
@@ -774,12 +840,12 @@ button {
   left: 50%;
 }
 
-.-top-32 {
-  top: -8rem;
-}
-
 .-top-24 {
   top: -6rem;
+}
+
+.-top-16 {
+  top: -4rem;
 }
 
 .z-30 {
@@ -871,20 +937,12 @@ button {
   width: 30%;
 }
 
-.w-\[34\%\] {
-  width: 34%;
-}
-
-.w-\[36\%\] {
-  width: 36%;
+.w-\[40\%\] {
+  width: 40%;
 }
 
 .w-\[140px\] {
   width: 140px;
-}
-
-.w-\[40\%\] {
-  width: 40%;
 }
 
 .w-\[120px\] {
@@ -977,8 +1035,8 @@ button {
   justify-content: space-between;
 }
 
-.gap-40 {
-  gap: 10rem;
+.gap-20 {
+  gap: 5rem;
 }
 
 .gap-8 {
@@ -1094,10 +1152,6 @@ button {
   --tw-bg-opacity: 0.25;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .p-10 {
   padding: 2.5rem;
 }
@@ -1105,6 +1159,16 @@ button {
 .py-\[80px\] {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .py-\[87px\] {
@@ -1130,6 +1194,11 @@ button {
 .py-\[100px\] {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.py-\[230px\] {
+  padding-top: 230px;
+  padding-bottom: 230px;
 }
 
 .pt-\[130px\] {
@@ -1200,6 +1269,20 @@ button {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 @font-face {
   font-family: "FF Monteral Two";
 
@@ -1209,49 +1292,49 @@ button {
 @font-face {
   font-family: "FF Monteral Two";
 
-  src: url(../fonts/media/ff-monteral-02.eot);
+  src: url(../fonts/ff-monteral-02.eot);
 }
 
 @font-face {
   font-family: "FF Monteral Two";
 
-  src: url(../fonts/media/ff-monteral-02.woff) format("woff");
+  src: url(../fonts/ff-monteral-02.woff) format("woff");
 }
 
 @font-face {
   font-family: "FF Monteral Two";
 
-  src: url(../fonts/media/ff-monteral-02.otf) format("truetype");
+  src: url(../fonts/ff-monteral-02.otf) format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
 
-  src: url(../fonts/media/Roboto-Regular.ttf) format("truetype");
+  src: url(../fonts/Roboto-Regular.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
 
-  src: url(../fonts/media/Roboto-Regular.eot);
+  src: url(../fonts/Roboto-Regular.eot);
 }
 
 @font-face {
   font-family: "Roboto";
 
-  src: url(../fonts/media/Roboto-Regular.woff) format("woff");
+  src: url(../fonts/Roboto-Regular.woff) format("woff");
 }
 
 @font-face {
   font-family: "Roboto";
 
-  src: url(../fonts/media/Roboto-Regular.otf) format("truetype");
+  src: url(../fonts/Roboto-Regular.otf) format("truetype");
 }
 
 @font-face {
   font-family: "SF Pro";
 
-  src: url(../fonts/media/SF-Pro.ttf) format("truetype");
+  src: url(../fonts/SF-Pro.ttf) format("truetype");
 }
 
 html,
@@ -1263,13 +1346,28 @@ body {
   overflow-x: hidden;
 }
 
-.after\:w-full::after {
-  content: var(--tw-content);
-  width: 100%;
+@media (min-width: 768px) {
+  .md\:gap-24 {
+    gap: 6rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:gap-32 {
+    gap: 8rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:gap-40 {
+    gap: 10rem;
+  }
+
+  .xl\:gap-20 {
+    gap: 5rem;
   }
 }
