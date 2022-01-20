@@ -425,13 +425,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 h2 {
   font-size: 56px;
-  text-transform: uppercase;
-  background: linear-gradient(90.49deg, #fcba3b 7.83%, #ff8a1e 98.28%);
-  line-height: 75px;
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: #000000;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  line-height: 70px;
+  color: #fcba3b;
 }
 
 h4 {
@@ -595,10 +590,48 @@ nav .logo {
   height: 605px;
 }
 
+.video-frame {
+  /* position: relative; */
+}
+
+.title-about {
+  position: relative;
+  font-family: FF Monteral Two;
+  text-align: center;
+  letter-spacing: -0.25px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(90.49deg, #fcba3b 7.83%, #ff8a1e 98.28%);
+  line-height: 75px;
+  /* -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: #000000; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-about:after {
+  content: url("../images/icons/gold.png");
+  position: absolute;
+  top: 75%;
+  left: 0;
+  right: 0;
+}
+
+.title-line {
+  position: relative;
+}
+
+.title-line:after {
+  content: url("../images/icons/line.png");
+  position: absolute;
+  top: 36%;
+  left: 0;
+  right: 0;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1280px;
+  max-width: 1660px;
 }
 
 button {
@@ -642,6 +675,18 @@ button {
   top: 0px;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-\[-13\%\] {
+  left: -13%;
+}
+
+.right-\[-13\%\] {
+  right: -13%;
+}
+
 .left-1\/2 {
   left: 50%;
 }
@@ -654,8 +699,48 @@ button {
   top: -6rem;
 }
 
+.-right-96 {
+  right: -24rem;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.left-\[-10\%\] {
+  left: -10%;
+}
+
+.left-\[-8\%\] {
+  left: -8%;
+}
+
+.right-\[-8\%\] {
+  right: -8%;
+}
+
+.right-\[-9\%\] {
+  right: -9%;
+}
+
+.right-\[-6\%\] {
+  right: -6%;
+}
+
+.left-\[1\/2\] {
+  left: 1 / 2;
+}
+
 .z-30 {
   z-index: 30;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.-z-10 {
+  z-index: -10;
 }
 
 .col-span-5 {
@@ -675,6 +760,10 @@ button {
   margin-top: -4rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .ml-\[11\%\] {
   margin-left: 11%;
 }
@@ -683,16 +772,20 @@ button {
   margin-top: 180px;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
 
 .mb-10 {
   margin-bottom: 2.5rem;
+}
+
+.ml-\[8\%\] {
+  margin-left: 8%;
+}
+
+.ml-\[12\%\] {
+  margin-left: 12%;
 }
 
 .flex {
@@ -727,6 +820,14 @@ button {
   width: 100%;
 }
 
+.w-\[400px\] {
+  width: 400px;
+}
+
+.w-\[480px\] {
+  width: 480px;
+}
+
 .w-\[78\%\] {
   width: 78%;
 }
@@ -751,12 +852,62 @@ button {
   width: 120px;
 }
 
+.w-\[40\%\] {
+  width: 40%;
+}
+
+.w-\[60\%\] {
+  width: 60%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[54\%\] {
+  width: 54%;
+}
+
+.w-\[80\%\] {
+  width: 80%;
+}
+
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.w-\[86\%\] {
+  width: 86%;
+}
+
 .max-w-screen-lg {
   max-width: 1024px;
 }
 
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-\[1\.2\] {
+  --tw-scale-x: 1.2;
+  --tw-scale-y: 1.2;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-\[1\.1\] {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-x-\[-1\] {
+  --tw-scale-x: -1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -809,6 +960,10 @@ button {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .gap-12 {
   gap: 3rem;
 }
@@ -820,6 +975,21 @@ button {
 .gap-x-10 {
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
+}
+
+.gap-x-20 {
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+}
+
+.gap-x-40 {
+  -moz-column-gap: 10rem;
+       column-gap: 10rem;
+}
+
+.gap-x-32 {
+  -moz-column-gap: 8rem;
+       column-gap: 8rem;
 }
 
 .space-y-5 > :not([hidden]) ~ :not([hidden]) {
@@ -968,12 +1138,16 @@ button {
   padding-top: 60px;
 }
 
-.pt-\[120px\] {
-  padding-top: 120px;
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .pt-\[110px\] {
   padding-top: 110px;
+}
+
+.pt-28 {
+  padding-top: 7rem;
 }
 
 .pt-\[108px\] {
@@ -1080,10 +1254,17 @@ button {
   src: url(../fonts/media/Roboto-Regular.otf) format("truetype");
 }
 
+@font-face {
+  font-family: "SF Pro";
+
+  src: url(../fonts/media/SF-Pro.ttf) format("truetype");
+}
+
 html,
 body {
   font-family: "FF Monteral Two", sans-serif;
   font-size: 16px;
   color: #ffffff;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }

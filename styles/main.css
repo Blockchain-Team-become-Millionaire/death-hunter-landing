@@ -3,6 +3,7 @@
 @import "tailwindcss/components";
 @import "./components/nav.css";
 @import "./components/general.css";
+@import "./components/typography.css";
 @import "./components/layout.css";
 @import "./components/button.css";
 
@@ -48,15 +49,16 @@
   src: url(../fonts/media/Roboto-Regular.otf) format("truetype");
 }
 
+@font-face {
+  font-family: "SF Pro";
+  src: url(../fonts/media/SF-Pro.ttf) format("truetype");
+}
+
 @layer base {
   h2 {
-    @apply text-[56px] uppercase;
-    background: linear-gradient(90.49deg, #fcba3b 7.83%, #ff8a1e 98.28%);
-    line-height: 75px;
-    -webkit-text-stroke-width: 4px;
-    -webkit-text-stroke-color: #000000;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 56px;
+    line-height: 70px;
+    color: #fcba3b;
   }
   h4 {
     @apply text-[30px] uppercase;
@@ -77,4 +79,5 @@ body {
   font-size: 16px;
   color: #ffffff;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }

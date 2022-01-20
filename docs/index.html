@@ -11,28 +11,33 @@
     <!-- Nav Desktop -->
 
     <nav class="flex z-30 fixed justify-center items-center inset-x-0 top-0 bg-[#181728] bg-opacity-30 h-[130px]">
-      <div class="container flex items-center">
-        <img src="assets/images/logo.png" class="logo" alt="logo" />
-        <ul class="flex">
-          <li class="text-white">
-            <a href="#hero">Hero</a>
-          </li>
-          <li class="text-white">
-            <a href="#roadmap">Roadmap</a>
-          </li>
-          <li class="text-white">
-            <a href="#our-team">Our team</a>
-          </li>
-          <li class="text-white">
-            <a href="#">Land</a>
-          </li>
-          <li class="text-white">
-            <a href="#partner">Partner</a>
-          </li>
-          <li class="text-white">
-            <a href="#">Docs</a>
-          </li>
-        </ul>
+      <div class="container flex items-center justify-between">
+        <div class="flex items-center">
+          <img src="assets/images/logo.png" class="logo" alt="logo" />
+          <ul class="flex">
+            <li class="text-white">
+              <a href="#hero">Hero</a>
+            </li>
+            <li class="text-white">
+              <a href="#roadmap">Roadmap</a>
+            </li>
+            <li class="text-white">
+              <a href="#our-team">Our team</a>
+            </li>
+            <li class="text-white">
+              <a href="#">Land</a>
+            </li>
+            <li class="text-white">
+              <a href="#partner">Partner</a>
+            </li>
+            <li class="text-white">
+              <a href="#">Docs</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <img class="" src="assets/images/play-now.png" alt="Play now" />
+        </div>
       </div>
     </nav>
     <!-- End Nav Desktop -->
@@ -42,16 +47,22 @@
     </section>
     <section id="about" class="section-about">
       <div class="container text-center pt-[60px]">
-        <h2>THE BEST IDLE RPG Game on blockchain</h2>
-        <p class="max-w-screen-lg mx-auto font-bold">
-          Death Hunter is a mobile aRPG Game in which players can earn token through PvP/ PvE battles between Heroes. Each Hero is unique and equally accessible
-          to anyone. There is no inital investment barrier in Death Hunter.
+        <h2 class="title-about">THE BEST IDLE RPG Game on blockchain</h2>
+        <p class="max-w-screen-lg mx-auto mt-10 font-bold">
+          Death Hunter is a mobile aRPG Game in which players can earn token through PvP/ PvE battles between Heroes.
         </p>
-        <div class="relative aspect-[1378/876] w-full pt-[120px]">
-          <div class="absolute inset-0">
-            <img src="assets/images/video-frame.png" />
+        <p class="mx-auto font-bold">Each Hero is unique and equally accessible to anyone. There is no inital investment barrier in Death Hunter.</p>
+        <div class="relative aspect-[1378/876] w-full">
+          <div class="absolute -translate-y-1/2 top-1/2">
+            <video class="w-[78%] ml-[11%]" muted autoplay src="assets/videos/game-story.mp4"></video>
           </div>
-          <video class="w-[78%] ml-[11%] top:[20%]" muted autoplay src="assets/videos/game-story.mp4"></video>
+          <div class="absolute inset-0">
+            <img src="assets/images/video-frame.png" class="absolute bottom-0 w-full" />
+          </div>
+          <div class="absolute inset-0">
+            <img class="absolute bottom-0 left-[-8%] w-[400px]" src="assets/images/animations/adonis-idle.gif" />
+            <img class="absolute bottom-0 right-[-6%] scale-x-[-1] w-[480px]" src="assets/images/animations/reapler-idle.gif" />
+          </div>
         </div>
       </div>
     </section>
@@ -82,8 +93,8 @@
     </section>
     <section id="hero" class="section-hero">
       <div class="container py-[87px]">
-        <h2>NFT Hero</h2>
-        <p>Earn your NFT items and trade them on the marketplace to make money</p>
+        <h2 class="text-center">NFT Hero</h2>
+        <p class="text-center font-['SF Pro'] font-bold text-[22px]">Earn your NFT items and trade them on the marketplace to make money</p>
         <div class="flex items-center mt-10">
           <div class="w-[30%]">
             <div>
@@ -149,14 +160,14 @@
     </section>
     <section id="game-feature" class="section-game-feature">
       <div class="container py-[23px]">
-        <h2 class="text-center">Game features</h2>
+        <h2 class="text-center title-line">Game features</h2>
       </div>
     </section>
     <section id="pte" class="section-pte">
       <div class="container py-[122px]">
-        <h2 class="text-center">Play to earn</h2>
-        <div class="grid grid-cols-12 gap-x-10">
-          <div class="col-span-5 rounded-[15px] bg-[#000000] bg-opacity-25 backdrop-blur-[15px] p-10 space-y-6">
+        <h2 class="z-10 text-center title-line">Play to earn</h2>
+        <div class="flex items-center justify-between">
+          <div class="z-10 w-[40%] rounded-[15px] bg-[#000000] bg-opacity-25 backdrop-blur-[15px] p-10 space-y-6">
             <div class="flex items-center space-x-6">
               <img src="assets/images/icons/gem-blue.png" class="w-[120px]" alt="gem" />
               <div class="space-y-3">
@@ -186,15 +197,23 @@
               </div>
             </div>
           </div>
-          <div class="col-span-7">
-            <img src="assets/images/magic-circle.png" class="w-full h-full animate-[spin_30s_linear_infinite]" />
+          <div class="relative w-[54%]">
+            <div class="scale-[1.1] -z-10">
+              <img src="assets/images/magic-circle.png" class="w-full h-full animate-[spin_30s_linear_infinite]" />
+            </div>
+            <div class="absolute w-[90%] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+              <img src="assets/images/treasure.png" class="" />
+            </div>
           </div>
         </div>
       </div>
     </section>
     <section id="roadmap" class="section-roadmap">
       <div class="container pt-[110px]">
-        <h2 class="text-center">Roadmap</h2>
+        <h2 class="text-center title-line">Roadmap</h2>
+        <div class="pt-28">
+          <img src="assets/images/roadmap.png" />
+        </div>
       </div>
     </section>
     <section id="our-team" class="section-our-team">
