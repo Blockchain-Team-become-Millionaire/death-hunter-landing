@@ -9,14 +9,48 @@
 @import "tailwindcss/utilities";
 
 @font-face {
-  font-family: "ff-monteral-two";
-  src: url("../fonts/ff-monteral-02.otf") format("woff"), url("../fonts/ff-monteral-02.otf") format("opentype"),
-    url("../fonts/ff-monteral-02.otf") format("truetype");
+  font-family: "FF Monteral Two";
+  src: url(../fonts/ff-monteral-02.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "FF Monteral Two";
+  src: url(../fonts/media/ff-monteral-02.eot);
+}
+
+@font-face {
+  font-family: "FF Monteral Two";
+  src: url(../fonts/media/ff-monteral-02.woff) format("woff");
+}
+
+@font-face {
+  font-family: "FF Monteral Two";
+  src: url(../fonts/media/ff-monteral-02.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/media/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/media/Roboto-Regular.eot);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/media/Roboto-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/media/Roboto-Regular.otf) format("truetype");
 }
 
 @layer base {
   h2 {
-    @apply text-[56px];
+    @apply text-[56px] uppercase;
     background: linear-gradient(90.49deg, #fcba3b 7.83%, #ff8a1e 98.28%);
     line-height: 75px;
     -webkit-text-stroke-width: 4px;
@@ -25,18 +59,22 @@
     -webkit-text-fill-color: transparent;
   }
   h4 {
-    @apply text-[30px];
+    @apply text-[30px] uppercase;
     background: linear-gradient(90.49deg, #fcba3b 7.83%, #ff8a1e 98.28%);
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #000000;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  p {
+    font-family: "Roboto", sans-serif;
+  }
 }
 
 html,
 body {
-  font-family: "ff-monteral-two", sans-serif;
+  font-family: "FF Monteral Two", sans-serif;
   font-size: 16px;
   color: #ffffff;
+  scroll-behavior: smooth;
 }
