@@ -811,6 +811,36 @@ nav .logo {
   margin-left: auto;
   margin-right: auto;
   max-width: 1660px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 button {
@@ -878,12 +908,24 @@ button {
   left: 50%;
 }
 
-.-top-24 {
-  top: -6rem;
+.-top-28 {
+  top: -7rem;
 }
 
 .-top-16 {
   top: -4rem;
+}
+
+.-top-32 {
+  top: -8rem;
+}
+
+.-top-20 {
+  top: -5rem;
+}
+
+.-top-36 {
+  top: -9rem;
 }
 
 .z-30 {
@@ -1390,17 +1432,39 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .lg\:gap-32 {
-    gap: 8rem;
+  .lg\:gap-28 {
+    gap: 7rem;
   }
 }
 
 @media (min-width: 1280px) {
-  .xl\:gap-40 {
-    gap: 10rem;
+  .xl\:gap-32 {
+    gap: 8rem;
   }
 
   .xl\:gap-20 {
     gap: 5rem;
+  }
+
+  .xl\:gap-28 {
+    gap: 7rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:-top-24 {
+    top: -6rem;
+  }
+
+  .\32xl\:-top-16 {
+    top: -4rem;
+  }
+
+  .\32xl\:-top-20 {
+    top: -5rem;
+  }
+
+  .\32xl\:gap-40 {
+    gap: 10rem;
   }
 }
