@@ -9,6 +9,8 @@
 
 @import "tailwindcss/utilities";
 
+@import "./components/partical.css";
+
 @font-face {
   font-family: "FF Monteral Two";
   src: url(../fonts/ff-monteral-02.ttf) format("truetype");
