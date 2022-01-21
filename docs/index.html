@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="msapplication-config" content="assets/favicon/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
-    <link href="assets/css/main.css?v=0.0.5" rel="stylesheet" />
+    <link href="assets/css/main.css?v=0.0.7" rel="stylesheet" />
     <title>Death Hunter - THE BEST IDLE RPG Game on blockchain</title>
   </head>
   <body>
@@ -126,9 +126,9 @@
     <div class="particle-2"></div>
 
     <section id="value" class="section-value">
-      <div class="container py-[80px]">
+      <div class="container py-[40px] lg:py-[80px]">
         <h2 class="title-gold">Value proposition</h2>
-        <div class="grid grid-col-1 lg:grid-cols-3 gap-20 md:gap-24 lg:gap-28 xl:gap-28 2xl:gap-40 mt-[180px]">
+        <div class="grid grid-col-1 lg:grid-cols-3 gap-20 md:gap-24 lg:gap-28 xl:gap-28 2xl:gap-40 mt-[140px] lg:mt-[180px]">
           <div
             data-aos="fade-right"
             data-aos-duration="750"
@@ -169,9 +169,9 @@
     <div class="particle-3"></div>
 
     <section id="hero" class="section-hero">
-      <div class="container py-[87px]">
+      <div class="container py-[50px] lg:py-[87px]">
         <h2 class="text-center">NFT Hero</h2>
-        <p class="text-center font-['SF Pro'] font-bold text-[22px]">Earn your NFT items and trade them on the marketplace to make money</p>
+        <p class="text-center font-['SF Pro'] font-bold text-[18px] lg:text-[22px]">Earn your NFT items and trade them on the marketplace to make money</p>
         <div class="grid grid-cols-10 mt-10">
           <div class="col-span-5 lg:col-span-3">
             <div class="hero-avatar active" data-hero="ducan">
@@ -199,10 +199,10 @@
               <img src="assets/images/heroes/avatar-thienbao-active.png" alt="thienbao" />
             </div>
           </div>
-          <div class="flex justify-center col-span-5 lg:col-span-4">
-            <img id="hero-idle" src="assets/images/animations/ducan-idle.gif" alt="Adonis" />
+          <div class="flex items-center justify-center col-span-5 lg:col-span-4">
+            <img id="hero-idle" class="" src="assets/images/animations/ducan-idle-new.gif" alt="Adonis" />
           </div>
-          <div class="col-span-10 lg:col-span-3">
+          <div class="items-center hidden col-span-10 lg:col-span-3 lg:flex">
             <div class="hero-info bg-[#1A172B] space-y-3 p-6 lg:p-10 lg:space-y-5 rounded-[20px]">
               <h3 id="hero-name">DUCAN</h3>
               <p id="hero-description" class="mt-4 text-[14px] lg:text-[16px]">
@@ -283,38 +283,46 @@
     <div class="particle-1"></div>
 
     <section id="pte" class="section-pte">
-      <div class="container py-[122px]">
+      <div class="container py-[80px] lg:py-[122px]">
         <h2 class="z-10 pb-10 text-center title-line lg:p-0">Play to earn</h2>
         <div class="flex flex-col items-center justify-between lg:flex-row">
-          <div class="z-10 lg:w-[40%] rounded-[15px] bg-[#000000] bg-opacity-25 backdrop-blur-[15px] space-y-6">
-            <div class="flex items-center space-x-6">
-              <img src="assets/images/icons/gem-blue.png" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[140px]" alt="gem" />
-              <div class="space-y-1 md:space-y-2 lg:space-y-3">
+          <div class="z-10 lg:w-[40%] rounded-[15px] bg-[#000000] bg-opacity-25 backdrop-blur-[15px] lg:space-y-2">
+            <div class="flex items-center">
+              <div class="px-6 py-4">
+                <img src="assets/images/icons/gem-blue.png" class="w-[80px] sm:w-[100px] md:w-[120px]" alt="gem" />
+              </div>
+              <div class="w-full space-y-1 md:space-y-2 lg:space-y-3">
                 <div class="text-[#FCBA3B] text-[22px]">Trading</div>
                 <p class="text-[13px] md:text-[14px] lg:text-[16px]">Players can sell Heroes and valuable items at the Marketplace.</p>
               </div>
             </div>
-            <div class="flex items-center space-x-6">
-              <img src="assets/images/icons/gem-green.png" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[140px]" alt="gem" />
-              <div class="space-y-1 md:space-y-2 lg:space-y-3">
+            <div class="flex items-center">
+              <div class="px-6 py-4">
+                <img src="assets/images/icons/gem-green.png" class="w-[80px] sm:w-[100px] md:w-[120px]" alt="gem" />
+              </div>
+              <div class="w-full space-y-1 md:space-y-2 lg:space-y-3">
                 <div class="text-[#FCBA3B] text-[22px]">Renting</div>
                 <p class="text-[13px] md:text-[14px] lg:text-[16px]">
                   Players can rent out their hero for profit. The rental price will depend on the hero's value in the market.
                 </p>
               </div>
             </div>
-            <div class="flex items-center space-x-6">
-              <img src="assets/images/icons/gem-purple.png" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[140px]" alt="gem" />
-              <div class="space-y-1 md:space-y-2 lg:space-y-3">
+            <div class="flex items-center">
+              <div class="px-6 py-4">
+                <img src="assets/images/icons/gem-purple.png" class="w-[80px] sm:w-[100px] md:w-[120px]" alt="gem" />
+              </div>
+              <div class="w-full space-y-1 md:space-y-2 lg:space-y-3">
                 <div class="text-[#FCBA3B] text-[22px]">Gacha</div>
                 <p class="text-[13px] md:text-[14px] lg:text-[16px]">
                   Lucky spin function, players will be profitable if they are lucky enough to open valuable rare heroes.
                 </p>
               </div>
             </div>
-            <div class="flex items-center space-x-6">
-              <img src="assets/images/icons/gem-purple.png" class="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[140px]" alt="gem" />
-              <div class="space-y-1 md:space-y-2 lg:space-y-3">
+            <div class="flex items-center">
+              <div class="px-6 py-4">
+                <img src="assets/images/icons/gem-purple.png" class="w-[80px] sm:w-[100px] md:w-[120px]" alt="gem" />
+              </div>
+              <div class="w-full space-y-1 md:space-y-2 lg:space-y-3">
                 <div class="text-[#FCBA3B] text-[22px]">Reward</div>
                 <p class="text-[13px] md:text-[14px] lg:text-[16px]">Player can earn token via quest, pvp, tower conquest, clan event.</p>
               </div>
@@ -334,7 +342,7 @@
 
     <div class="particle-2"></div>
 
-    <!-- <section id="roadmap" class="section-roadmap">
+    <section id="roadmap" class="hidden section-roadmap lg:block">
       <div class="container pt-[60px]">
         <div class="roadmap">
           <div class="pb-16">
@@ -391,14 +399,14 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <div class="particle-3"></div>
 
     <section id="our-team" class="section-our-team">
-      <div class="container pt-[108px]">
+      <div class="container pt-[70px] lg:pt-[108px]">
         <h2 class="text-center">Our Team</h2>
-        <div class="grid max-w-screen-lg grid-cols-4 gap-2 pt-12 mx-auto md:gap-4 lg:gap-6">
+        <div class="grid max-w-screen-lg grid-cols-4 gap-2 pt-6 mx-auto lg:-pt-12 md:gap-4 lg:gap-6">
           <div>
             <img src="assets/images/teams/allian-mark.png" alt="Allian Mark" />
             <div class="text-center text-[16px] md:text-[20px] lg:text-[24px] font-bold font-['Roboto']">ALLIAN MARK</div>
@@ -426,10 +434,10 @@
     <div class="particle-4"></div>
 
     <section id="partner" class="section-partner bg-[#171717]">
-      <div class="container pt-[80px]">
+      <div class="container pt-[50px] lg:pt-[80px]">
         <h2 class="text-center">Partner</h2>
         <p class="text-center">Our Partners & Investors</p>
-        <div class="grid grid-cols-3 gap-6 pt-20 lg:grid-cols-5">
+        <div class="grid grid-cols-3 gap-6 pt-10 lg:pt-20 lg:grid-cols-5">
           <img src="assets/images/partners/1.jpg" alt="Partner" />
           <img src="assets/images/partners/2.jpg" alt="Partner" />
           <img src="assets/images/partners/3.jpg" alt="Partner" />
@@ -497,8 +505,8 @@
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
-  <script src="assets/js/landing.js?v=0.0.2"></script>
-  <script src="assets/js/narbar.js?v=0.0.2"></script>
+  <script src="assets/js/landing.js?v=0.0.4"></script>
+  <script src="assets/js/narbar.js?v=0.0.4"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </html>

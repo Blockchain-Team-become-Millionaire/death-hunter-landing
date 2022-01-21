@@ -57,7 +57,7 @@ $(document).ready(function () {
 function initHeroSection() {
   $("[data-hero]").click(function () {
     const heroId = this.attributes["data-hero"].value;
-    $("#hero-idle").attr("src", `assets/images/animations/${heroId}-idle.gif`);
+    $("#hero-idle").attr("src", `assets/images/animations/${heroId}-idle-new.gif`);
     $("#hero-name").text(heroId);
     $("#hero-description").text(hero[heroId].description);
     $("#hero-strength").css("width", `${hero[heroId].strength}%`);

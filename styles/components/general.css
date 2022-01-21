@@ -64,11 +64,12 @@
   background-image: url("../images/backgrounds/our-team.jpg");
   background-size: cover;
   height: 625px;
+  @apply h-[400px] lg:h-[625px];
 }
 
 .section-partner {
   background-size: cover;
-  height: 605px;
+  @apply h-[400px] lg:h-[605px];
 }
 
 @keyframes scale-in-out {
@@ -166,7 +167,7 @@
 
 .hero-avatar {
   float: center;
-  @apply transition-all scale-90 brightness-[0.5] -my-6;
+  @apply transition-all scale-90 brightness-[0.5] -my-2 md:-my-4 lg:-my-6;
 }
 .hero-avatar:hover,
 .hero-avatar.active {
@@ -191,8 +192,8 @@
 }
 
 .game-feature-image {
-  border: 8px solid #fcba3b;
   border-image: linear-gradient(180deg, #fcba3b 0%, #d3ab54 100%), 2;
   filter: drop-shadow(0px 5px 30px rgba(252, 186, 59, 0.65));
   border-radius: 10px;
+  @apply border-[4px] lg:border-[8px] border-solid border-[#fcba3b];
 }
