@@ -50,6 +50,7 @@ const hero = {
 };
 
 $(document).ready(function () {
+  AOS.init();
   initHeroSection();
 });
 
