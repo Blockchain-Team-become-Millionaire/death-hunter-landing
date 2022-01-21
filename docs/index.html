@@ -17,50 +17,83 @@
     <title>Death Hunter - THE BEST IDLE RPG Game on blockchain</title>
   </head>
   <body>
-    <!-- Nav Desktop -->
-
-    <nav class="flex z-30 fixed justify-center items-center inset-x-0 top-0 bg-[#181728] bg-opacity-30 h-[100px]">
-      <div class="container flex items-center justify-between">
-        <div class="flex items-center">
-          <a href="#">
-            <img src="assets/images/logo.png" class="logo" alt="logo" />
+    <div class="fixed z-30 w-full antialiased bg-[#181728] lg:bg-opacity-30">
+      <div x-data="{ open: false }" class="container relative flex flex-col mx-auto md:items-center md:flex-row">
+        <div class="flex flex-row items-center justify-between p-1 md:p-3">
+          <a href="#" class="-mt-1 -ml-5 text-lg font-semibold rounded-lg">
+            <img src="assets/images/logo.png" class="-mb-3 lg:-mb-3.5 h-[70px] md:h-[75px] lg:h-[80px]" alt="logo" />
           </a>
-          <ul class="flex">
-            <li class="text-white">
-              <a href="#about">video</a>
-            </li>
-            <li class="text-white">
-              <a href="#hero">Hero</a>
-            </li>
-            <li class="text-white">
-              <a href="#game-feature">Game Feature</a>
-            </li>
-            <li class="text-white">
-              <a href="#roadmap">Roadmap</a>
-            </li>
-            <li class="text-white">
-              <a href="#our-team">Our team</a>
-            </li>
-            <li class="text-white">
-              <a href="#">Docs</a>
-            </li>
-          </ul>
+          <a href="#" class="right-0 -mt-1 text-lg font-semibold rounded-lg md:absolute">
+            <img class="play-now-animation h-[35px] md:h-[40px] lg:h-[45px]" src="assets/images/play-now.png" alt="Play now" />
+          </a>
+          <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path
+                x-show="!open"
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+              <path
+                x-show="open"
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
         </div>
-        <div>
-          <img class="play-now-animation w-[140px]" src="assets/images/play-now.png" alt="Play now" />
-        </div>
+        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:flex-row">
+          <a class="px-3 py-2 uppercase hover:text-[#fcba3b]" href="#about">Video</a>
+          <a class="px-3 py-2 uppercase hover:text-[#fcba3b]" href="#hero">Hero</a>
+          <a class="px-3 py-2 uppercase hover:text-[#fcba3b]" href="#game-feature">Game Feature</a>
+          <a class="px-3 py-2 uppercase hover:text-[#fcba3b]" href="#roadmap">Roadmap</a>
+          <a class="px-3 py-2 uppercase hover:text-[#fcba3b]" href="#our-team">Our team</a>
+          <div @click.away="open = false" class="relative" x-data="{ open: false }">
+            <button
+              @click="open = !open"
+              class="flex bg-transparent flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left hover:text-[#fcba3b] rounded-lg md:w-auto md:inline md:mt-0 md:ml-4">
+              <span>Docs</span>
+              <svg
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                :class="{'rotate-180': open, 'rotate-0': !open}"
+                class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <div
+              x-show="open"
+              x-transition:enter="transition ease-out duration-100"
+              x-transition:enter-start="transform opacity-0 scale-95"
+              x-transition:enter-end="transform opacity-100 scale-100"
+              x-transition:leave="transition ease-in duration-75"
+              x-transition:leave-start="transform opacity-100 scale-100"
+              x-transition:leave-end="transform opacity-0 scale-95"
+              class="absolute right-0 w-full origin-top-right md:w-auto">
+              <div class="bg-[#181728] rounded-md shadow-lg divide-y divide-[#ffffff] divide-opacity-10">
+                <a class="block px-6 py-3 font-semibold hover:text-[#fcba3b] whitespace-nowrap" target="_blank" href="https://whitepaper.deathhunter.io/">
+                  White Paper
+                </a>
+                <a class="block px-6 py-3 font-semibold hover:text-[#fcba3b] whitespace-nowrap" href="#">Pitch Deck</a>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
-    </nav>
+    </div>
+
     <!-- End Nav Desktop -->
 
-    <section id="video" class="section-video">
+    <section id="video" class="section-video z-[1]">
       <video muted autoplay loop style="height: 100%; width: 100%">
         <source src="assets/videos/background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </section>
 
-    <div class="particle-1"></div>
+    <div class="particle-1 z-[0]"></div>
 
     <section id="about" class="section-about">
       <div class="container text-center pt-[60px]">
@@ -89,7 +122,7 @@
     <section id="value" class="section-value">
       <div class="container py-[80px]">
         <h2 class="title-gold">Value proposition</h2>
-        <div class="grid grid-cols-3 gap-20 md:gap-24 lg:gap-28 xl:gap-28 2xl:gap-40 mt-[180px]">
+        <div class="grid grid-col-1 lg:grid-cols-3 gap-20 md:gap-24 lg:gap-28 xl:gap-28 2xl:gap-40 mt-[180px]">
           <div
             data-aos="fade-right"
             data-aos-duration="750"
@@ -129,8 +162,8 @@
       <div class="container py-[87px]">
         <h2 class="text-center">NFT Hero</h2>
         <p class="text-center font-['SF Pro'] font-bold text-[22px]">Earn your NFT items and trade them on the marketplace to make money</p>
-        <div class="flex items-center mt-10">
-          <div class="w-[30%]">
+        <div class="grid grid-cols-10 mt-10">
+          <div class="col-span-5 lg:col-span-3">
             <div class="hero-avatar active" data-hero="ducan">
               <img src="assets/images/heroes/avatar-ducan.png" alt="ducan" />
               <img src="assets/images/heroes/avatar-ducan-active.png" alt="ducan" />
@@ -156,10 +189,10 @@
               <img src="assets/images/heroes/avatar-thienbao-active.png" alt="thienbao" />
             </div>
           </div>
-          <div class="w-[40%] flex justify-center">
+          <div class="flex justify-center col-span-5 lg:col-span-4">
             <img id="hero-idle" src="assets/images/animations/ducan-idle.gif" alt="Adonis" />
           </div>
-          <div class="w-[30%]">
+          <div class="col-span-10 lg:col-span-3">
             <div class="hero-info bg-[#1A172B] p-10 rounded-[20px]">
               <h4 id="hero-name">DUCAN</h4>
               <p id="hero-description" class="mt-4 mb-10">
@@ -240,7 +273,7 @@
     <section id="pte" class="section-pte">
       <div class="container py-[122px]">
         <h2 class="z-10 text-center title-line">Play to earn</h2>
-        <div class="flex items-center justify-between">
+        <div class="flex flex-wrap items-center justify-between">
           <div class="z-10 w-[40%] rounded-[15px] bg-[#000000] bg-opacity-25 backdrop-blur-[15px] p-10 space-y-6">
             <div class="flex items-center space-x-6">
               <img src="assets/images/icons/gem-blue.png" class="w-[120px]" alt="gem" />
@@ -285,7 +318,7 @@
 
     <div class="particle-2"></div>
 
-    <section id="roadmap" class="section-roadmap">
+    <!-- <section id="roadmap" class="section-roadmap">
       <div class="container pt-[60px]">
         <div class="roadmap">
           <div class="pb-16">
@@ -342,7 +375,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <div class="particle-3"></div>
 
@@ -380,7 +413,7 @@
       <div class="container pt-[80px]">
         <h2 class="text-center">Partner</h2>
         <p class="text-center">Our Partners & Investors</p>
-        <div class="grid grid-cols-5 gap-6 pt-20">
+        <div class="grid grid-cols-3 gap-6 pt-20 lg:grid-cols-5">
           <img src="assets/images/partners/1.jpg" alt="Partner" />
           <img src="assets/images/partners/2.jpg" alt="Partner" />
           <img src="assets/images/partners/3.jpg" alt="Partner" />
@@ -391,7 +424,7 @@
     </section>
     <footer class="bg-[#000000]">
       <div class="container py-[100px]">
-        <div class="grid grid-cols-5">
+        <div class="grid grid-cols-2 lg:grid-cols-5">
           <div>
             <img src="assets/images/logo.png" alt="Logo" />
             <div>SUBCRIBE US</div>
@@ -442,12 +475,14 @@
       </div>
     </footer>
   </body>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
-  <script src="assets/js/landing.js?v=0.0.1"></script>
+  <script src="assets/js/landing.js?v=0.0.2"></script>
+  <script src="assets/js/narbar.js?v=0.0.2"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </html>
