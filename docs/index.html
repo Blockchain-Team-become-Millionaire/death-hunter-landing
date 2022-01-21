@@ -18,15 +18,15 @@
   </head>
   <body>
     <div class="fixed z-30 w-full antialiased bg-[#181728] lg:bg-opacity-30">
-      <div x-data="{ open: false }" class="container relative flex flex-col mx-auto md:items-center md:flex-row">
-        <div class="flex flex-row items-center justify-between p-1 md:p-3">
+      <div x-data="{ open: false }" class="container relative flex flex-col mx-auto lg:items-center lg:flex-row">
+        <div class="flex flex-row items-center justify-between p-1 lg:p-3">
           <a href="#" class="-mt-1 -ml-5 text-lg font-semibold rounded-lg">
             <img src="assets/images/logo.png" class="-mb-3 lg:-mb-3.5 h-[70px] md:h-[75px] lg:h-[80px]" alt="logo" />
           </a>
-          <a href="#" class="right-0 -mt-1 text-lg font-semibold rounded-lg md:absolute">
+          <a href="#" class="right-0 -mt-1 text-lg font-semibold rounded-lg lg:absolute">
             <img class="play-now-animation h-[35px] md:h-[40px] lg:h-[45px]" src="assets/images/play-now.png" alt="Play now" />
           </a>
-          <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+          <button class="rounded-lg lg:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
               <path
                 x-show="!open"
@@ -41,7 +41,7 @@
             </svg>
           </button>
         </div>
-        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:flex-row">
+        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 lg:pb-0 lg:flex lg:flex-row">
           <a class="px-3 py-2 uppercase hover:text-[#fcba3b]" href="#about">Video</a>
           <a class="px-3 py-2 uppercase hover:text-[#fcba3b]" href="#hero">Hero</a>
           <a class="px-3 py-2 uppercase hover:text-[#fcba3b]" href="#game-feature">Game Feature</a>
@@ -50,13 +50,13 @@
           <div @click.away="open = false" class="relative" x-data="{ open: false }">
             <button
               @click="open = !open"
-              class="flex bg-transparent flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left hover:text-[#fcba3b] rounded-lg md:w-auto md:inline md:mt-0 md:ml-4">
+              class="flex bg-transparent flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left hover:text-[#fcba3b] rounded-lg lg:w-auto lg:inline lg:mt-0 lg:ml-4">
               <span>Docs</span>
               <svg
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 :class="{'rotate-180': open, 'rotate-0': !open}"
-                class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform lg:-mt-1">
                 <path
                   fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -71,7 +71,7 @@
               x-transition:leave="transition ease-in duration-75"
               x-transition:leave-start="transform opacity-100 scale-100"
               x-transition:leave-end="transform opacity-0 scale-95"
-              class="absolute right-0 w-full origin-top-right md:w-auto">
+              class="absolute right-0 w-full origin-top-right lg:w-auto">
               <div class="bg-[#181728] rounded-md shadow-lg divide-y divide-[#ffffff] divide-opacity-10">
                 <a class="block px-6 py-3 font-semibold hover:text-[#fcba3b] whitespace-nowrap" target="_blank" href="https://whitepaper.deathhunter.io/">
                   White Paper
@@ -84,7 +84,8 @@
       </div>
     </div>
 
-    <!-- End Nav Desktop -->
+    <!-- End Nav -->
+    <div class="h-[62px] lg:hidden"></div>
 
     <section id="video" class="section-video z-[1]">
       <video muted autoplay loop style="height: 100%; width: 100%">
