@@ -58,12 +58,12 @@
 
 @layer base {
   h2 {
-    @apply text-[32px] xl:text-[40px] 2xl:text-[56px];
+    @apply text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[56px];
     line-height: 70px;
     color: #fcba3b;
   }
   h4 {
-    @apply text-[30px] uppercase;
+    @apply text-[20px] sm:text-[24px] lg:text-[28px] xl:text-[32px] uppercase;
     background: linear-gradient(90.49deg, #fcba3b 7.83%, #ff8a1e 98.28%);
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #000000;
