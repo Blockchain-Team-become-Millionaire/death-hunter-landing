@@ -4,28 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="assets/favicon/site.webmanifest" />
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/frontend/assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/frontend/assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/frontend/assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/frontend/assets/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="/frontend/assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="/frontend/assets/favicon/favicon.ico" />
     <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml" />
+    <meta name="msapplication-config" content="/frontend/assets/favicon/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
-    <link href="assets/css/main.css?v=0.0.7" rel="stylesheet" />
+    <link href="/frontend/assets/css/main.css?v=0.1.2" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
     <title>Death Hunter - THE BEST IDLE RPG Game on blockchain</title>
   </head>
   <body>
     <div class="fixed z-30 w-full antialiased bg-[#181728] lg:bg-opacity-30">
       <div x-data="{ open: false }" class="container relative flex flex-col mx-auto lg:items-center lg:flex-row">
         <div class="flex flex-row items-center justify-between p-1 lg:p-3">
+          <!-- LOGO -->
           <a href="#" class="-mt-1 -ml-5 text-lg font-semibold rounded-lg">
-            <img src="assets/images/logo.png" class="-mb-3 lg:-mb-3.5 h-[70px] md:h-[75px] lg:h-[80px]" alt="logo" />
+            <img src="/frontend/assets/images/logo.png" class="-mb-3 lg:-mb-3.5 h-[70px] md:h-[75px] lg:h-[80px]" alt="logo" />
           </a>
-          <a href="#" class="right-0 -mt-1 text-lg font-semibold rounded-lg lg:absolute">
-            <img class="play-now-animation h-[35px] md:h-[40px] lg:h-[45px]" src="assets/images/play-now.png" alt="Play now" />
-          </a>
+          <!-- END LOGO -->
+
+          <!-- CONNECT BUTTON -->
+          <div class="right-0 -mt-1 text-lg font-semibold rounded-lg btn__connect_wallet lg:absolute">
+            <img class="play-now-animation h-[35px] md:h-[40px] lg:h-[45px]" src="/frontend/assets/images/play-now.png" alt="Play now" />
+          </div>
+          <!-- END CONNECT BUTTON -->
+
+          <!-- WALLET DETAIL -->
+          <div style="display: none" class="right-0 -mt-1 text-lg font-semibold rounded-lg wallet-detail lg:absolute">
+            <div class="relative">
+              <img class="h-[35px] md:h-[40px] lg:h-[45px]" src="/frontend/assets/images/icons/button-frame.png" alt="Play now" />
+              <div class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-[14px] font-normal leading-5 text-center">
+                <span class="block text-slate-200 address"></span>
+                <div class="flex space-x-1 text-[12px] font-normal leading-4 justify-center">
+                  <span>Balance:</span>
+                  <span class="balance"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END WALLET DETAIL -->
+
           <button class="rounded-lg lg:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
               <path
@@ -88,8 +111,9 @@
     <div class="h-[62px] lg:hidden"></div>
 
     <section id="video" class="section-video z-[1]">
-      <video muted autoplay loop style="height: 100%; width: 100%">
-        <source src="assets/videos/background.mp4" type="video/mp4" />
+      <video muted playsinline autoplay loop style="height: 100%; width: 100%">
+        <source src="/frontend/assets/videos/background-new.webm" type="video/webm" />
+        <source src="/frontend/assets/videos/background-new.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </section>
@@ -107,18 +131,29 @@
         </p>
         <div class="relative aspect-[1378/876] w-full">
           <div class="absolute -translate-y-1/2 top-1/2">
-            <video class="w-[78%] ml-[11%]" muted autoplay src="assets/videos/game-story.mp4"></video>
+            <video id="game-story" class="w-[78%] ml-[11%]" preload="metadata" playsinline>
+              <source src="/frontend/assets/videos/game-story.webm#t=0.4" type="video/webm" />
+              <source src="/frontend/assets/videos/game-story.mp4#t=0.4" type="video/mp4" />
+            </video>
+            <div id="video-control" class="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2">
+              <div class="relative">
+                <div class="w-16 h-16 lg:w-28 lg:h-28 animate-[ping_2s_linear_infinite] bg-[#FCBA3B] rounded-full"></div>
+                <img
+                  src="/frontend/assets/images/icons/play-video.png"
+                  class="absolute w-16 h-16 -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2 lg:w-28 lg:h-28" />
+              </div>
+            </div>
           </div>
-          <div class="absolute inset-0">
-            <img src="assets/images/video-frame.png" class="absolute bottom-0 w-full" />
+          <div class="absolute inset-0 pointer-events-none select-none">
+            <img src="/frontend/assets/images/video-frame.png" class="absolute bottom-0 w-full" />
           </div>
-          <div class="absolute inset-0 bottom-[6%]">
+          <div class="absolute inset-0 bottom-[6%] select-none pointer-events-none">
             <img
               class="absolute bottom-0 left-[-8%] w-[80px] sm:w-[100px] md:w-[150px] lg:w-[250px] xl:w-[400px]"
-              src="assets/images/animations/adonis-idle.gif" />
+              src="/frontend/assets/images/animations/adonis-idle-new-min.gif" />
             <img
               class="absolute bottom-0 right-[-6%] scale-x-[-1] w-[90px] sm:w-[120px] md:w-[180px] lg:w-[300px] xl:w-[480px]"
-              src="assets/images/animations/ducan-idle.gif" />
+              src="/frontend/assets/images/animations/ducan-idle-new-min.gif" />
           </div>
         </div>
       </div>
@@ -139,7 +174,7 @@
               Unlike most NFT games that only focus on Earning, Death Hunter focuses more on the player's experience on and off the game by creating a
               Play-and-Earn balance
             </p>
-            <img class="absolute -translate-x-1/2 left-1/2 top-[-40%] w-[160px] lg:w-[200px]" src="assets/images/icons/shield.png" alt="hammer" />
+            <img class="absolute -translate-x-1/2 left-1/2 top-[-40%] w-[160px] lg:w-[200px]" src="/frontend/assets/images/icons/shield.png" alt="hammer" />
           </div>
           <div
             data-aos="fade-up"
@@ -150,7 +185,7 @@
             <p class="text-[#D1D3D4] text-[14px] md:text-[15px] lg:text-[16px] font-['Roboto'] font-bold">
               Player can earn token and NFT hero by staking NFT hero and NFT box
             </p>
-            <img class="absolute -translate-x-1/2 left-1/2 top-[-30%] w-[180px] lg:w-[220px]" src="assets/images/icons/hammer.png" alt="hammer" />
+            <img class="absolute -translate-x-1/2 left-1/2 top-[-30%] w-[180px] lg:w-[220px]" src="/frontend/assets/images/icons/hammer.png" alt="hammer" />
           </div>
           <div
             data-aos="fade-left"
@@ -161,7 +196,7 @@
             <p class="text-[#D1D3D4] text-[14px] md:text-[15px] lg:text-[16px] font-['Roboto'] font-bold">
               Two types of Token: pre-minted token and unlimited token
             </p>
-            <img class="absolute -translate-x-1/2 left-1/2 top-[-20%] w-[180px] lg:w-[220px]" src="assets/images/icons/trophy.png" alt="hammer" />
+            <img class="absolute -translate-x-1/2 left-1/2 top-[-20%] w-[180px] lg:w-[220px]" src="/frontend/assets/images/icons/trophy.png" alt="hammer" />
           </div>
         </div>
       </div>
@@ -176,32 +211,32 @@
         <div class="grid grid-cols-10 mt-10">
           <div class="col-span-5 lg:col-span-3">
             <div class="hero-avatar active" data-hero="ducan">
-              <img src="assets/images/heroes/avatar-ducan.png" alt="ducan" />
-              <img src="assets/images/heroes/avatar-ducan-active.png" alt="ducan" />
+              <img src="/frontend/assets/images/heroes/avatar-ducan.png?v=1" alt="ducan" />
+              <img src="/frontend/assets/images/heroes/avatar-ducan-active.png?v=1" alt="ducan" />
             </div>
             <div class="hero-avatar" data-hero="adonis">
-              <img src="assets/images/heroes/avatar-adonis.png" alt="adonis" />
-              <img src="assets/images/heroes/avatar-adonis-active.png" alt="adonis" />
+              <img src="/frontend/assets/images/heroes/avatar-adonis.png?v=1" alt="adonis" />
+              <img src="/frontend/assets/images/heroes/avatar-adonis-active.png?v=1" alt="adonis" />
             </div>
             <div class="hero-avatar" data-hero="joyce">
-              <img src="assets/images/heroes/avatar-joyce.png" alt="joyce" />
-              <img src="assets/images/heroes/avatar-joyce-active.png" alt="joyce" />
+              <img src="/frontend/assets/images/heroes/avatar-joyce.png?v=1" alt="joyce" />
+              <img src="/frontend/assets/images/heroes/avatar-joyce-active.png?v=1" alt="joyce" />
             </div>
             <div class="hero-avatar" data-hero="selina">
-              <img src="assets/images/heroes/avatar-selina.png" alt="selina" />
-              <img src="assets/images/heroes/avatar-selina-active.png" alt="selina" />
+              <img src="/frontend/assets/images/heroes/avatar-selina.png?v=1" alt="selina" />
+              <img src="/frontend/assets/images/heroes/avatar-selina-active.png?v=1" alt="selina" />
             </div>
             <div class="hero-avatar" data-hero="sunhee">
-              <img src="assets/images/heroes/avatar-sunhee.png" alt="sunhee" />
-              <img src="assets/images/heroes/avatar-sunhee-active.png" alt="sunhee" />
+              <img src="/frontend/assets/images/heroes/avatar-sunhee.png?v=1" alt="sunhee" />
+              <img src="/frontend/assets/images/heroes/avatar-sunhee-active.png?v=1" alt="sunhee" />
             </div>
             <div class="hero-avatar" data-hero="thienbao">
-              <img src="assets/images/heroes/avatar-thienbao.png" alt="thienbao" />
-              <img src="assets/images/heroes/avatar-thienbao-active.png" alt="thienbao" />
+              <img src="/frontend/assets/images/heroes/avatar-thienbao.png?v=1" alt="thienbao" />
+              <img src="/frontend/assets/images/heroes/avatar-thienbao-active.png?v=1" alt="thienbao" />
             </div>
           </div>
           <div class="flex items-center justify-center col-span-5 lg:col-span-4">
-            <img id="hero-idle" class="" src="assets/images/animations/ducan-idle-new.gif" alt="Adonis" />
+            <img id="hero-idle" class="" src="/frontend/assets/images/animations/ducan-idle-new-min.gif" alt="Adonis" />
           </div>
           <div class="items-center hidden col-span-10 lg:col-span-3 lg:flex">
             <div class="hero-info bg-[#1A172B] space-y-3 p-6 lg:p-10 lg:space-y-5 rounded-[20px]">
@@ -249,7 +284,7 @@
       <div class="container py-[23px]">
         <h2 class="text-center title-line">Game features</h2>
         <div class="grid gap-8 mt-10 xl:gap-20 lg:grid-cols-2">
-          <img class="order-2 game-feature-image lg:order-1" src="assets/images/asemble-your-squad.jpeg" />
+          <img class="order-2 game-feature-image lg:order-1" src="/frontend/assets/images/asemble-your-squad.jpeg" />
           <div class="flex flex-col justify-center order-1 lg:order-2">
             <h3 class="title-line-full">Asemble your squad</h3>
             <p class="mt-4 font-bold text-[18px] lg:text-[22px]">
@@ -262,10 +297,10 @@
             <h3 class="title-line-full">Powered your heroes</h3>
             <p class="mt-4 font-bold text-[18px] lg:text-[22px]">Upgrade hero levels and evolve to strengthen your squad.</p>
           </div>
-          <img class="game-feature-image" src="assets/images/powered-your-heroes.jpeg" />
+          <img class="game-feature-image" src="/frontend/assets/images/powered-your-heroes.jpeg" />
         </div>
         <div class="grid gap-8 mt-10 xl:gap-20 lg:grid-cols-2">
-          <img class="order-2 game-feature-image lg:order-1" src="assets/images/game-story-pve.jpeg" />
+          <img class="order-2 game-feature-image lg:order-1" src="/frontend/assets/images/game-story-pve.jpeg" />
           <div class="flex flex-col justify-center order-1 lg:order-2">
             <h3 class="title-line-full">Game story - pve</h3>
             <p class="mt-4 font-bold text-[18px] lg:text-[22px]">Fight in story mode and get bonus tokens even when you're offline.</p>
@@ -276,7 +311,7 @@
             <h3 class="title-line-full">PVP arena</h3>
             <p class="mt-4 font-bold text-[18px] lg:text-[22px]">Fight with other players and get rewarded with $DHT tokens, champions and gift boxes.</p>
           </div>
-          <img class="game-feature-image" src="assets/images/pvp-arena.png" />
+          <img class="game-feature-image" src="/frontend/assets/images/pvp-arena.png" />
         </div>
       </div>
     </section>
@@ -290,7 +325,7 @@
           <div class="z-10 lg:w-[40%] rounded-[15px] bg-[#000000] bg-opacity-25 backdrop-blur-[15px] lg:space-y-2">
             <div class="flex items-center">
               <div class="px-6 py-4">
-                <img src="assets/images/icons/gem-blue.png" class="w-[80px] sm:w-[100px] md:w-[120px]" alt="gem" />
+                <img src="/frontend/assets/images/icons/gem-blue.png" class="w-[80px] sm:w-[100px] md:w-[120px]" alt="gem" />
               </div>
               <div class="w-full space-y-1 md:space-y-2 lg:space-y-3">
                 <div class="text-[#FCBA3B] text-[22px]">Trading</div>
@@ -299,7 +334,7 @@
             </div>
             <div class="flex items-center">
               <div class="px-6 py-4">
-                <img src="assets/images/icons/gem-green.png" class="w-[80px] sm:w-[100px] md:w-[120px]" alt="gem" />
+                <img src="/frontend/assets/images/icons/gem-green.png" class="w-[80px] sm:w-[100px] md:w-[120px]" alt="gem" />
               </div>
               <div class="w-full space-y-1 md:space-y-2 lg:space-y-3">
                 <div class="text-[#FCBA3B] text-[22px]">Renting</div>
@@ -310,7 +345,7 @@
             </div>
             <div class="flex items-center">
               <div class="px-6 py-4">
-                <img src="assets/images/icons/gem-purple.png" class="w-[80px] sm:w-[100px] md:w-[120px]" alt="gem" />
+                <img src="/frontend/assets/images/icons/gem-purple.png" class="w-[80px] sm:w-[100px] md:w-[120px]" alt="gem" />
               </div>
               <div class="w-full space-y-1 md:space-y-2 lg:space-y-3">
                 <div class="text-[#FCBA3B] text-[22px]">Gacha</div>
@@ -321,7 +356,7 @@
             </div>
             <div class="flex items-center">
               <div class="px-6 py-4">
-                <img src="assets/images/icons/gem-purple.png" class="w-[80px] sm:w-[100px] md:w-[120px]" alt="gem" />
+                <img src="/frontend/assets/images/icons/gem-purple.png" class="w-[80px] sm:w-[100px] md:w-[120px]" alt="gem" />
               </div>
               <div class="w-full space-y-1 md:space-y-2 lg:space-y-3">
                 <div class="text-[#FCBA3B] text-[22px]">Reward</div>
@@ -331,10 +366,10 @@
           </div>
           <div class="relative mt-8 lg:mt-0 lg:w-[54%]">
             <div class="scale-[1.1] -z-10">
-              <img src="assets/images/magic-circle.png" class="w-full h-full animate-[spin_30s_linear_infinite]" />
+              <img src="/frontend/assets/images/magic-circle.png" class="w-full h-full animate-[spin_30s_linear_infinite]" />
             </div>
             <div class="absolute w-[90%] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-              <img src="assets/images/treasure.png" class="" />
+              <img src="/frontend/assets/images/treasure.png" class="" />
             </div>
           </div>
         </div>
@@ -343,13 +378,13 @@
 
     <div class="particle-2"></div>
 
-    <section id="roadmap" class="hidden section-roadmap lg:block">
+    <section id="roadmap" class="section-roadmap lg:block">
       <div class="container pt-[60px]">
         <div class="roadmap">
           <div class="pb-16">
             <h2 class="text-center title-line">Roadmap</h2>
           </div>
-          <div class="roadmap-content w-[520px] absolute left-1/2 -translate-x-1/2">
+          <div class="roadmap-content w-full xl:w-[520px] absolute left-1/2 -translate-x-1/2">
             <ul>
               <div>2023 and Later</div>
               <li>- Death Hunter Metaverse</li>
@@ -409,22 +444,22 @@
         <h2 class="text-center">Our Team</h2>
         <div class="grid max-w-screen-lg grid-cols-4 gap-2 pt-6 mx-auto lg:-pt-12 md:gap-4 lg:gap-6">
           <div>
-            <img src="assets/images/teams/allian-mark.png" alt="Allian Mark" />
+            <img src="/frontend/assets/images/teams/allian-mark.png" alt="Allian Mark" />
             <div class="text-center text-[16px] md:text-[20px] lg:text-[24px] font-bold font-['Roboto']">ALLIAN MARK</div>
             <div class="text-center text-[12px] lg:text-[16px] font-bold font-['Roboto']">Founder - CEO</div>
           </div>
           <div>
-            <img src="assets/images/teams/praveen-khichar.png" alt="Praveen Khichar" />
+            <img src="/frontend/assets/images/teams/praveen-khichar.png" alt="Praveen Khichar" />
             <div class="text-center text-[16px] md:text-[20px] lg:text-[24px] font-bold font-['Roboto']">PRAVEEN KHICHAR</div>
             <div class="text-center text-[12px] lg:text-[16px] font-bold font-['Roboto']">CMO</div>
           </div>
           <div>
-            <img src="assets/images/teams/kevin-le.png" alt="Kevin Le" />
+            <img src="/frontend/assets/images/teams/kevin-le.png" alt="Kevin Le" />
             <div class="text-center text-[16px] md:text-[20px] lg:text-[24px] font-bold font-['Roboto']">KEVIN LE</div>
             <div class="text-center text-[12px] lg:text-[16px] font-bold font-['Roboto']">Head of Blockchain</div>
           </div>
           <div>
-            <img src="assets/images/teams/dat-nguyen.png" alt="DAT NGUYEN" />
+            <img src="/frontend/assets/images/teams/dat-nguyen.png" alt="DAT NGUYEN" />
             <div class="text-center text-[16px] md:text-[20px] lg:text-[24px] font-bold font-['Roboto']">DAT NGUYEN</div>
             <div class="text-center text-[12px] lg:text-[16px] font-bold font-['Roboto']">Head of Game</div>
           </div>
@@ -439,11 +474,11 @@
         <h2 class="text-center">Partner</h2>
         <p class="text-center">Our Partners & Investors</p>
         <div class="grid grid-cols-3 gap-6 pt-10 lg:pt-20 lg:grid-cols-5">
-          <img src="assets/images/partners/1.jpg" alt="Partner" />
-          <img src="assets/images/partners/2.jpg" alt="Partner" />
-          <img src="assets/images/partners/3.jpg" alt="Partner" />
-          <img src="assets/images/partners/4.jpg" alt="Partner" />
-          <img src="assets/images/partners/5.jpg" alt="Partner" />
+          <img src="/frontend/assets/images/partners/1.jpg" alt="Partner" />
+          <img src="/frontend/assets/images/partners/2.jpg" alt="Partner" />
+          <img src="/frontend/assets/images/partners/3.jpg" alt="Partner" />
+          <img src="/frontend/assets/images/partners/4.jpg" alt="Partner" />
+          <img src="/frontend/assets/images/partners/5.jpg" alt="Partner" />
         </div>
       </div>
     </section>
@@ -451,7 +486,7 @@
       <div class="container py-[100px]">
         <div class="grid grid-cols-2 lg:grid-cols-5">
           <div>
-            <img src="assets/images/logo.png" alt="Logo" />
+            <img src="/frontend/assets/images/logo.png" alt="Logo" />
             <div>SUBCRIBE US</div>
           </div>
           <div>
@@ -500,14 +535,19 @@
       </div>
     </footer>
   </body>
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"></script>
-  <script src="assets/js/landing.js?v=0.0.4"></script>
-  <script src="assets/js/narbar.js?v=0.0.4"></script>
+  <script src="/frontend/assets/js/landing.js?v=0.1.0"></script>
+  <script src="/frontend/assets/js/narbar.js?v=0.1.0"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/web3modal@1.9.4/dist/index.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@mintgate/evm-chains@0.3.16/dist/umd/index.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.6.5/dist/umd/index.min.js"></script>
+  <script type="text/javascript" src="/frontend/custom/plugins/web3/app.js?v={{ time() }}"></script>
 </html>

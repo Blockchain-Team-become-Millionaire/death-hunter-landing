@@ -49,15 +49,48 @@ const hero = {
   },
 };
 
+$.fn.preload = function () {
+  this.each(function () {
+    $("<img/>")[0].src = this;
+  });
+};
+
 $(document).ready(function () {
   AOS.init();
   initHeroSection();
+  handleVideoStory();
+  $([
+    "/frontend/assets/images/animations/adonis-idle-new-min.gif",
+    "/frontend/assets/images/animations/ducan-idle-new-min.gif",
+    "/frontend/assets/images/animations/joyce-idle-new-min.gif",
+    "/frontend/assets/images/animations/selina-idle-new-min.gif",
+    "/frontend/assets/images/animations/sunhee-idle-new-min.gif",
+    "/frontend/assets/images/animations/thienbao-idle-new-min.gif",
+  ]).preload();
 });
+
+function handleVideoStory() {
+  $("video#game-story").on("play", function () {
+    $("#video-control").css("display", "none");
+  });
+
+  $("video#game-story").on("pause", function () {
+    $("#video-control").css("display", "block");
+  });
+
+  $("video#game-story").click(function () {
+    this.paused ? this.play() : this.pause();
+  });
+
+  $("#video-control").click(function () {
+    $("video#game-story").get(0).click();
+  });
+}
 
 function initHeroSection() {
   $("[data-hero]").click(function () {
     const heroId = this.attributes["data-hero"].value;
-    $("#hero-idle").attr("src", `assets/images/animations/${heroId}-idle-new.gif`);
+    $("#hero-idle").attr("src", `/frontend/assets/images/animations/${heroId}-idle-new-min.gif`);
     $("#hero-name").text(heroId);
     $("#hero-description").text(hero[heroId].description);
     $("#hero-strength").css("width", `${hero[heroId].strength}%`);

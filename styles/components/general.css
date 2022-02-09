@@ -89,15 +89,12 @@
 }
 
 .roadmap {
-  @apply mx-auto bg-no-repeat py-10;
-  background-image: url(../images/time-line-1.png);
-  background-size: 1153px 1024px;
-  width: 1160px;
-  height: 1024px;
+  @apply mx-auto bg-no-repeat py-10 lg:w-[1160px] h-[860px] xl:h-[1024px] bg-none xl:bg-[url(../images/time-line-1.png)] xl:bg-[length:1153px_1024px];
 }
 
 .roadmap ul {
   width: 260px;
+  @apply w-1/2 xl:w-[260px];
   margin-top: -30px;
 }
 
@@ -167,16 +164,12 @@
 
 .hero-avatar {
   float: center;
-  @apply transition-all scale-90 brightness-[0.5] -my-2 md:-my-4 lg:-my-6;
+  @apply transition-all scale-90 brightness-[0.5];
 }
 .hero-avatar:hover,
 .hero-avatar.active {
   cursor: pointer;
   @apply transition-all scale-110 brightness-100;
-}
-
-.hero-avatar:hover,
-.hero-avatar.active {
 }
 
 .hero-avatar img {
